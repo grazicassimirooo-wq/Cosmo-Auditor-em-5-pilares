@@ -1,0 +1,85 @@
+/* ============================================================
+   RESET — base limpa para construir sem surpresas
+   Não é um reset agressivo; mantém comportamentos úteis do navegador
+   ============================================================ */
+
+/* Box-sizing universal: padding e border contam dentro da largura */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove margens default que fazem CSS virar caça ao tesouro */
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scroll nativo: cobre links âncora sem JS */
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Anti-aliasing para tipografia mais limpa */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* Imagens responsivas por padrão */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Listas sem bullets quando usadas como UI (a maioria dos casos) */
+ul, ol {
+    list-style: none;
+}
+
+/* Links sem decoração default — controle total no CSS */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Botões: zerados para receber estilo customizado */
+button {
+    font: inherit;
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Acessibilidade: respeita preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Foco visível para navegação por teclado (acessibilidade) */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+}
+
+/* Seleção de texto com cor da marca */
+::selection {
+    background: var(--color-accent);
+    color: var(--color-bg);
+}

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O método de 5 pilares para criar sites vendáveis no cosmo digital. Auditoria, motion design e mídia premium para freelancers e agências.">
+    <meta name="theme-color" content="#0A0A0F">
+
+    <!-- Open Graph para compartilhamento social -->
+    <meta property="og:title" content="The Pillars Method — Sites premium que vendem">
+    <meta property="og:description" content="O método de 5 pilares para sair do amador e entregar sites vendáveis.">
+    <meta property="og:type" content="website">
+
+    <title>The Pillars Method — Sites premium que vendem</title>
+
+    <!-- Preconnect: economiza ~100ms na conexão com Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Par tipográfico premium: Fraunces (display editorial) + Inter (body técnico) -->
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS modular: reset → tokens → layout → componentes → animações -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- ======================================================
+         GRÃO DE FUNDO: textura sutil que tira o "ar de IA limpa demais"
+         É um SVG noise inline, ~2kb, fixo na tela com mix-blend-mode
+         ====================================================== -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- ======================================================
+         NAVEGAÇÃO: minimalista, fixa, com glass effect ao rolar
+         ====================================================== -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="#" class="nav__logo">
+                <span class="nav__logo-mark">◐</span>
+                <span class="nav__logo-text">Pillars</span>
+            </a>
+            <div class="nav__links">
+                <a href="#pillars">Método</a>
+                <a href="#stack">Stack</a>
+                <a href="#cta">Começar</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ======================================================
+         HERO: tipografia editorial + scroll cue
+         A frase é o produto. Sem botão de compra no hero — o objetivo
+         é prender a atenção. CTA forte vem depois da prova de valor.
+         ====================================================== -->
+    <header class="hero">
+        <div class="hero__container">
+
+            <!-- Eyebrow: contexto rápido para o visitante saber onde está -->
+            <span class="hero__eyebrow" data-reveal>
+                <span class="hero__dot"></span>
+                Framework de auditoria
+            </span>
+
+            <!-- Headline editorial: serif com itálico no acento, quebra de linha intencional -->
+            <h1 class="hero__title" data-reveal data-reveal-delay="100">
+                Os 5 pilares que separam<br>
+                um site amador<br>
+                de um <em>vendável</em>.
+            </h1>
+
+            <!-- Subtítulo: explica o "para quem" e gera identificação imediata -->
+            <p class="hero__subtitle" data-reveal data-reveal-delay="200">
+                Para quem entrega sites e quer parar de ouvir
+                <em>"está bonito, mas falta algo"</em>.
+                Esse é o método para descobrir <em>o quê</em>.
+            </p>
+
+            <!-- Stats inline: prova quantitativa logo no hero, sem fazer scroll -->
+            <div class="hero__stats" data-reveal data-reveal-delay="300">
+                <div class="hero__stat">
+                    <span class="hero__stat-num">05</span>
+                    <span class="hero__stat-label">Pilares de avaliação</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">100%</span>
+                    <span class="hero__stat-label">Stack gratuita ou freemium</span>
+                </div>
+                <div class="hero__stat">
+                    <span class="hero__stat-num">∞</span>
+                    <span class="hero__stat-label">Projetos elevados</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scroll cue: linha animada indicando "tem mais abaixo" -->
+        <div class="hero__scroll-cue" aria-hidden="true">
+            <span>scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </header>
+
+    <!-- ======================================================
+         MANIFESTO: bridge entre hero e pilares
+         "Por que esse método existe" — antes de mostrar o como
+         ====================================================== -->
+    <section class="manifesto">
+        <div class="container">
+            <p class="manifesto__quote" data-reveal>
+                Site premium <em>não é</em> sobre adicionar mais animação.
+                É sobre <em>remover</em> tudo que comunica amador
+                — começando pela fundação.
+            </p>
+        </div>
+    </section>
+
+    <!-- ======================================================
+         PILARES: o coração do produto
+         Cards com glassmorphism (fundo escuro permite o efeito funcionar)
+         Numeração editorial grande, hierarquia clara
+         ====================================================== -->
+    <section class="pillars" id="pillars">
+        <div class="container">
+
+            <!-- Cabeçalho de seção -->
+            <div class="section-header" data-reveal>
+                <span class="section-header__eyebrow">O método</span>
+                <h2 class="section-header__title">
+                    A ordem importa<br>
+                    <em>tanto quanto</em> o conteúdo.
+                </h2>
+            </div>
+
+            <!-- Grid de pilares -->
+            <div class="pillars__grid">
+
+                <!-- PILAR 01 -->
+                <article class="pillar-card" data-reveal>
+                    <div class="pillar-card__head">
+                        <span class="pillar-card__num">01</span>
+                        <span class="pillar-card__tag">Fundação</span>
+                    </div>
+                    <h3 class="pillar-card__title">
+                        Tipografia, paleta<br>
+                        e hierarquia visual
+                    </h3>
+                    <p class="pillar-card__why">
+                        80% da percepção de premium vem de tipografia +
+                        espaçamento + paleta. Animação não esconde fundação ruim.
+                    </p>
+                    <ul class="pillar-card__list">
+                        <li>Par tipográfico (display + body)</li>
+                        <li>Escala harmônica (1.25× ou 1.333×)</li>
+                        <li>Sistema de espaçamento 4px ou 8px</li>
+                        <li>Hierarquia legível à distância</li>
+                    </ul>
+                </article>
+
+                <!-- PILAR 02 -->
+                <article class="pillar-card" data-reveal data-reveal-delay="80">
+                    <div class="pillar-card__head">
+                        <span class="pillar-card__num">02</span>
+                        <span class="pillar-card__tag">Jornada</span>
+                    </div>
+                    <h3 class="pillar-card__title">
+                        UX e arquitetura<br>
+                        de conversão
+                    </h3>
+                    <p class="pillar-card__why">
+                        Animar uma jornada quebrada só deixa a quebra mais bonita.
+                        Estrutura primeiro, motion depois.
+                    </p>
+                    <ul class="pillar-card__list">
+                        <li>Hero entendido em 3 segundos</li>
+                        <li>Sequência psicológica completa</li>
+                        <li>CTAs estratégicos repetidos</li>
+                        <li>Mobile pensado, não adaptado</li>
+                    </ul>
+                </article>
+
+                <!-- PILAR 03 -->
+                <article class="pillar-card" data-reveal data-reveal-delay="160">
+                    <div class="pillar-card__head">
+                        <span class="pillar-card__num">03</span>
+                        <span class="pillar-card__tag">Imersão</span>
+                    </div>
+                    <h3 class="pillar-card__title">
+                        Motion design<br>
+                        e estética avançada
+                    </h3>
+                    <p class="pillar-card__why">
+                        Movimento serve à narrativa, não à vaidade.
+                        Cada animação responde a "o que isso revela?".
+                    </p>
+                    <ul class="pillar-card__list">
+                        <li>Scroll reveal escalonado</li>
+                        <li>Pinning + scrub para storytelling</li>
+                        <li>Glassmorphism com contexto certo</li>
+                        <li>Regra dos 3 efeitos por página</li>
+                    </ul>
+                </article>
+
+                <!-- PILAR 04 -->
+                <article class="pillar-card" data-reveal data-reveal-delay="240">
+                    <div class="pillar-card__head">
+                        <span class="pillar-card__num">04</span>
+                        <span class="pillar-card__tag">Mídia</span>
+                    </div>
+                    <h3 class="pillar-card__title">
+                        Vídeos, loops<br>
+                        e imagens IA orgânicas
+                    </h3>
+                    <p class="pillar-card__why">
+                        Imagem plástica destrói credibilidade que tipografia
+                        construiu. Textura orgânica é inegociável.
+                    </p>
+                    <ul class="pillar-card__list">
+                        <li>Câmera real no prompt</li>
+                        <li>Imperfeição controlada</li>
+                        <li>Luz natural, nunca de estúdio fake</li>
+                        <li>Negative prompt anti-plástico</li>
+                    </ul>
+                </article>
+
+                <!-- PILAR 05 -->
+                <article class="pillar-card" data-reveal data-reveal-delay="320">
+                    <div class="pillar-card__head">
+                        <span class="pillar-card__num">05</span>
+                        <span class="pillar-card__tag">Performance</span>
+                    </div>
+                    <h3 class="pillar-card__title">
+                        Otimização para<br>
+                        Vercel e Firebase
+                    </h3>
+                    <p class="pillar-card__why">
+                        Site lindo em 8s perde 60% antes do primeiro scroll.
+                        Performance valida se a estética é sustentável.
+                    </p>
+                    <ul class="pillar-card__list">
+                        <li>LCP abaixo de 2.5s</li>
+                        <li>Lazy load de motion libs</li>
+                        <li>Mobile com fallbacks reais</li>
+                        <li>Lighthouse 90+ em todas as métricas</li>
+                    </ul>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================
+         STACK: prova de credibilidade técnica
+         Mostra ferramentas reais → autoridade no método
+         ====================================================== -->
+    <section class="stack" id="stack">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-header__eyebrow">Ferramentas</span>
+                <h2 class="section-header__title">
+                    Stack <em>gratuita</em><br>
+                    de padrão profissional.
+                </h2>
+            </div>
+
+            <!-- Grid horizontal scrollable em mobile, normal em desktop -->
+            <div class="stack__grid">
+                <div class="stack__item" data-reveal>
+                    <span class="stack__item-cat">Animação</span>
+                    <span class="stack__item-name">GSAP + ScrollTrigger</span>
+                    <span class="stack__item-note">Padrão da indústria, gratuito desde 2024</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="60">
+                    <span class="stack__item-cat">Smooth scroll</span>
+                    <span class="stack__item-name">Lenis</span>
+                    <span class="stack__item-note">Suaviza sem matar performance</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="120">
+                    <span class="stack__item-cat">3D leve</span>
+                    <span class="stack__item-name">Spline</span>
+                    <span class="stack__item-note">Embed gratuito, sem WebGL pesado</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="180">
+                    <span class="stack__item-cat">Carrossel</span>
+                    <span class="stack__item-name">Embla Carousel</span>
+                    <span class="stack__item-note">3kb, zero dependência</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="240">
+                    <span class="stack__item-cat">Vídeo loop</span>
+                    <span class="stack__item-name">Coverr.co + Pexels</span>
+                    <span class="stack__item-note">Cinematografia gratuita</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="300">
+                    <span class="stack__item-cat">Imagem IA</span>
+                    <span class="stack__item-name">Flux Schnell</span>
+                    <span class="stack__item-note">Textura realista, sem plástico</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="360">
+                    <span class="stack__item-cat">Compressão</span>
+                    <span class="stack__item-name">Squoosh + Handbrake</span>
+                    <span class="stack__item-note">WebP, AVIF e MP4 otimizados</span>
+                </div>
+                <div class="stack__item" data-reveal data-reveal-delay="420">
+                    <span class="stack__item-cat">Deploy</span>
+                    <span class="stack__item-name">Vercel</span>
+                    <span class="stack__item-note">CDN global e image optimization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================
+         CTA: bloco final com forte contraste
+         ====================================================== -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <div class="cta__inner" data-reveal>
+                <span class="cta__eyebrow">Próximo passo</span>
+                <h2 class="cta__title">
+                    Aplicar o método<br>
+                    no seu próximo projeto.
+                </h2>
+                <p class="cta__text">
+                    Pegue os 5 pilares, comece pelo Pilar 01,
+                    e pare de entregar sites que ficam <em>"quase lá"</em>.
+                </p>
+                <div class="cta__actions">
+                    <a href="#pillars" class="btn btn--primary">
+                        Revisar os pilares
+                        <span class="btn__arrow">→</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noopener" class="btn btn--ghost">
+                        Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================
+         FOOTER: créditos e meta
+         ====================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <span class="footer__mark">◐</span>
+                    <span>Pillars Method</span>
+                </div>
+                <div class="footer__meta">
+                    <span>Construído aplicando o próprio método.</span>
+                    <span>© <time>2026</time></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS modular: scroll reveal + nav effects, vanilla, ~2kb -->
+    <script src="js/reveal.js" defer></script>
+    <script src="js/nav.js" defer></script>
+</body>
+</html>

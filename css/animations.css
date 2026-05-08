@@ -1,0 +1,61 @@
+/* ============================================================
+   ANIMATIONS — apenas o que serve à narrativa
+   Aplicando a "regra dos 3 efeitos": reveal, hover e accent pulse
+   ============================================================ */
+
+
+/* ─── SCROLL REVEAL ─────────────────────────────────────────
+   Estado inicial: invisível e levemente abaixo.
+   Quando a classe .is-visible é adicionada (via JS), anima até o lugar.
+   Performance: anima APENAS opacity e transform (compositor da GPU). */
+
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity var(--dur-reveal) var(--ease-out),
+                transform var(--dur-reveal) var(--ease-out);
+    will-change: opacity, transform;   /* hint para o navegador otimizar */
+}
+
+[data-reveal].is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger automático via data-attribute: o JS lê o delay e aplica */
+[data-reveal][data-reveal-delay="80"]  { transition-delay: 80ms; }
+[data-reveal][data-reveal-delay="100"] { transition-delay: 100ms; }
+[data-reveal][data-reveal-delay="120"] { transition-delay: 120ms; }
+[data-reveal][data-reveal-delay="160"] { transition-delay: 160ms; }
+[data-reveal][data-reveal-delay="180"] { transition-delay: 180ms; }
+[data-reveal][data-reveal-delay="200"] { transition-delay: 200ms; }
+[data-reveal][data-reveal-delay="240"] { transition-delay: 240ms; }
+[data-reveal][data-reveal-delay="300"] { transition-delay: 300ms; }
+[data-reveal][data-reveal-delay="320"] { transition-delay: 320ms; }
+[data-reveal][data-reveal-delay="360"] { transition-delay: 360ms; }
+[data-reveal][data-reveal-delay="420"] { transition-delay: 420ms; }
+
+
+/* ─── PAGE LOAD ──────────────────────────────────────────
+   Fade in geral do body para suavizar a entrada do site */
+
+@keyframes page-load {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body {
+    animation: page-load 600ms var(--ease-out) backwards;
+}
+
+
+/* ─── REDUCED MOTION ─────────────────────────────────
+   Acessibilidade: anula efeitos para quem pediu */
+
+@media (prefers-reduced-motion: reduce) {
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

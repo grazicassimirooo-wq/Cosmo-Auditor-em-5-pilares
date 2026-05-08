@@ -1,0 +1,39 @@
+# ========================
+# .gitignore — arquivos que NÃO sobem pro GitHub
+# ========================
+
+# Dependências (caso adicione build tools no futuro)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
+
+# Variáveis de ambiente (NUNCA commitar chaves)
+.env
+.env.local
+.env.*.local
+
+# Build / cache
+.cache/
+dist/
+build/
+.parcel-cache/
+.next/
+
+# Vercel
+.vercel

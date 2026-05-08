@@ -1,0 +1,104 @@
+/* ============================================================
+   DESIGN TOKENS — fonte única da verdade
+   Mude valores aqui e o site inteiro responde. NUNCA hardcode hex no CSS.
+   ============================================================ */
+
+:root {
+
+    /* ─── PALETA: editorial escura com acento coral quente ─────
+       Profundidade espacial (não preto puro), acento que comanda atenção,
+       neutros para hierarquia. Paleta dominante + 1 cor de impacto. */
+
+    /* Fundos: escala de profundidade, do mais escuro ao mais claro */
+    --color-bg:           #0A0A0F;   /* fundo principal, quase preto azulado */
+    --color-bg-soft:      #12121A;   /* fundo de seções alternadas */
+    --color-bg-card:      #1A1A24;   /* cards e superfícies elevadas */
+    --color-bg-hover:     #22222E;   /* hover state */
+
+    /* Glass: usado em nav e cards com glassmorphism */
+    --color-glass:        rgba(26, 26, 36, 0.55);
+    --color-glass-border: rgba(255, 255, 255, 0.08);
+
+    /* Texto: 3 níveis de hierarquia, nunca branco puro (cansa a vista) */
+    --color-text:         #ECECEF;   /* primário */
+    --color-text-muted:   #9C9CA8;   /* secundário, descrições */
+    --color-text-faint:   #5C5C68;   /* terciário, eyebrows e meta */
+
+    /* Acento: coral quente, único na paleta — comanda atenção total */
+    --color-accent:       #E8593C;
+    --color-accent-soft:  rgba(232, 89, 60, 0.12);
+    --color-accent-line:  rgba(232, 89, 60, 0.4);
+
+    /* Bordas: sutis, baseadas em transparência (adapta a qualquer fundo) */
+    --color-border:       rgba(255, 255, 255, 0.06);
+    --color-border-hover: rgba(255, 255, 255, 0.14);
+
+
+    /* ─── TIPOGRAFIA: par editorial ──────────────────────────
+       Fraunces (serif variável, com itálicos vivos) para display.
+       Inter (sans neutro moderno) para body. Nunca Arial/Roboto. */
+
+    --font-display: 'Fraunces', 'Times New Roman', Georgia, serif;
+    --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+
+    /* Escala harmônica 1.25× (Major Third) — proporção musical */
+    --fs-xs:    0.75rem;     /* 12px — meta, eyebrows */
+    --fs-sm:    0.875rem;    /* 14px — UI secundário */
+    --fs-base:  1rem;        /* 16px — body */
+    --fs-md:    1.125rem;    /* 18px — body destacado */
+    --fs-lg:    1.5rem;      /* 24px — H4 */
+    --fs-xl:    2rem;        /* 32px — H3 */
+    --fs-2xl:   2.75rem;     /* 44px — H2 */
+    --fs-3xl:   clamp(3rem, 7vw, 5.5rem);   /* hero — fluido */
+
+    /* Pesos: poucos e intencionais */
+    --fw-light:    300;
+    --fw-regular:  400;
+    --fw-medium:   500;
+    --fw-semibold: 600;
+
+    /* Line-heights: serif precisa mais respiro que sans */
+    --lh-tight:   1.05;   /* títulos display */
+    --lh-snug:    1.25;   /* subtítulos */
+    --lh-normal:  1.5;    /* UI */
+    --lh-relaxed: 1.75;   /* corpo de texto longo */
+
+
+    /* ─── ESPAÇAMENTO: sistema 8px ─────────────────────────
+       Toda margem/padding deriva dessa escala. Zero valores aleatórios. */
+
+    --space-1:  0.25rem;   /* 4px */
+    --space-2:  0.5rem;    /* 8px */
+    --space-3:  0.75rem;   /* 12px */
+    --space-4:  1rem;      /* 16px */
+    --space-5:  1.5rem;    /* 24px */
+    --space-6:  2rem;      /* 32px */
+    --space-7:  3rem;      /* 48px */
+    --space-8:  4rem;      /* 64px */
+    --space-9:  6rem;      /* 96px */
+    --space-10: 8rem;      /* 128px */
+
+
+    /* ─── LAYOUT ───────────────────────────────────── */
+
+    --container-max:  1200px;
+    --container-pad:  clamp(1.25rem, 4vw, 2.5rem);
+
+    /* Border radius — sutil, nunca arredondado demais (dá ar de app, não premium) */
+    --radius-sm:  6px;
+    --radius-md:  10px;
+    --radius-lg:  16px;
+    --radius-xl:  24px;
+
+
+    /* ─── MOTION: durações e easings consistentes ─────── */
+
+    --ease-out:     cubic-bezier(0.16, 1, 0.3, 1);     /* "swift out", padrão Apple */
+    --ease-in-out:  cubic-bezier(0.65, 0, 0.35, 1);    /* clássico balanceado */
+
+    --dur-fast:    180ms;
+    --dur-normal:  280ms;
+    --dur-slow:    560ms;
+    --dur-reveal:  900ms;
+}
