@@ -236,7 +236,7 @@ h1, h2, h3 {
 @media (max-width: 768px) {
     .hero__video { display: none; }
     .hero__video-wrap {
-        background: url('../assets/img/hero-poster.jpg') center/cover no-repeat;
+        background: url('../hero-poster.jpg') center/cover no-repeat;
     }
 }
 
