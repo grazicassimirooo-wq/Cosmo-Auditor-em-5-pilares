@@ -27,6 +27,7 @@
             <div class="nav__links">
                 <a href="#pillars">Método</a>
                 <a href="#motion">Motion</a>
+                <a href="#auditor">Auditor</a>
                 <a href="#stack">Stack</a>
                 <a href="#cta">Começar</a>
             </div>
@@ -241,6 +242,29 @@
             </div>
         </div>
     </section>
+    <section class="auditor" id="auditor">
+        <div class="container">
+            <div class="section-header" data-reveal>
+                <span class="section-header__eyebrow">Auditor ao vivo · IA</span>
+                <h2 class="section-header__title">Jogue sua ideia.<br>Receba o plano dos <em>5 pilares</em>.</h2>
+            </div>
+            <p class="motion__lede" data-reveal>
+                Descreva seu projeto em uma ou duas frases. A IA aplica o método na sua ideia e devolve
+                <em>como construir o site</em> — pilar por pilar — e <em>por que aquilo vende</em>.
+            </p>
+            <form class="auditor__form" id="auditorForm" data-reveal>
+                <textarea id="auditorInput" class="auditor__input" rows="3" maxlength="1500"
+                    placeholder="Ex.: uma cafeteria de especialidade no centro que quer atrair público jovem e vender assinatura de grãos."></textarea>
+                <div class="auditor__bar">
+                    <span class="auditor__hint" id="auditorHint">Quanto mais específico, melhor o plano.</span>
+                    <button type="submit" class="btn btn--primary" id="auditorBtn">
+                        Gerar meu plano <span class="btn__arrow">→</span>
+                    </button>
+                </div>
+            </form>
+            <div class="auditor__result" id="auditorResult" aria-live="polite"></div>
+        </div>
+    </section>
     <section class="cta" id="cta">
         <div class="container">
             <div class="cta__inner" data-reveal>
@@ -264,6 +288,7 @@
     </footer>
     <script src="js/reveal.js" defer></script>
     <script src="js/nav.js" defer></script>
+    <script src="js/auditor.js" defer></script>
 </body>
 </html>
  
