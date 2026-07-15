@@ -158,6 +158,31 @@ Sem otimização adicional. Tudo já vem configurado nos headers da Vercel.
 
 ---
 
+## ✦ Auditor ao vivo (IA)
+
+A seção **Auditor** deixa o visitante descrever a própria ideia e recebe, na hora,
+um plano de site aplicado aos 5 pilares + motion por objetivo + por que aquilo vende.
+
+Roda numa função serverless (`api/plano.js`) que chama a API da Anthropic. A chave
+fica **só no servidor** — nunca no navegador.
+
+### Configuração na Vercel
+
+Em **Project → Settings → Environment Variables**, adicione:
+
+| Variável | Valor | Obrigatória |
+|----------|-------|-------------|
+| `ANTHROPIC_API_KEY` | sua chave da Anthropic (`sk-ant-...`) | Sim |
+| `ANTHROPIC_MODEL` | modelo a usar (padrão: `claude-sonnet-4-5`) | Não |
+
+Depois de salvar, faça **Redeploy**. Sem a chave, o auditor responde com uma mensagem
+avisando que ainda não está configurado (o resto do site funciona normalmente).
+
+> A chave é paga por uso. Para um endpoint público, considere adicionar rate limiting
+> (ex.: Vercel Firewall / KV) antes de divulgar amplamente.
+
+---
+
 ## ✦ Licença
 
 MIT — use, modifique, venda. Apenas mantenha o crédito quando aplicável.
