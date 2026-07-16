@@ -8,7 +8,7 @@
    Sem dependências — usa o fetch nativo do runtime Node da Vercel.
    ============================================================ */
 
-const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-4-5";
+const MODEL = process.env.ANTHROPIC_MODEL || "claude-sonnet-5";
 const MAX_IDEA = 1500;
 
 const SYSTEM = `Você é o auditor do "The Pillars Method", um framework para criar sites premium que vendem. Um visitante vai te dar a ideia de um projeto e você devolve um plano prático de como construir o site aplicando os 5 pilares, e como isso vende.

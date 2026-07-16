@@ -173,7 +173,7 @@ Em **Project → Settings → Environment Variables**, adicione:
 | Variável | Valor | Obrigatória |
 |----------|-------|-------------|
 | `ANTHROPIC_API_KEY` | sua chave da Anthropic (`sk-ant-...`) | Sim |
-| `ANTHROPIC_MODEL` | modelo a usar (padrão: `claude-sonnet-4-5`) | Não |
+| `ANTHROPIC_MODEL` | modelo a usar (padrão: `claude-sonnet-5`) | Não |
 
 Depois de salvar, faça **Redeploy**. Sem a chave, o auditor responde com uma mensagem
 avisando que ainda não está configurado (o resto do site funciona normalmente).
